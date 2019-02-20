@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		class Options {
+			constructor(height='50px', width='100px', bg='gray', fontSize='1.5em', textAlign='center', border='solid 1px'){
+				this.height = height;
+				this.width = width;
+				this.bg = bg;
+				this.fontSize = fontSize;
+				this.textAlign = textAlign;
+				this.border = border;
+			}
+			createnew(){
+				let t = prompt('enter some text', '');
+				let div = document.createElement('div');
+				div.style.cssText = `height: ${this.height}; width: ${this.width}; background: ${this.bg}; font-size: ${this.fontSize}; text-align: ${this.textAlign}; border: ${this.border}`;
+				div.textContent = t;
+				document.body.appendChild(div);
+			}
+		}
+
+		let res = new Options();
+		res.createnew();
+	</script>
+</body>
+</html>
